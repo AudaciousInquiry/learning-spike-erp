@@ -1,0 +1,149 @@
+{
+  "resourceType": "Bundle",
+  "id": "FHIR-340",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/R4/StructureDefinition/Bundle"
+    ]
+  },
+  "identifier": {
+    "system": "https://github.com/microsoft-healthcare-madison/learning-spike-erp/",
+    "value": "FHIR-340"
+  },
+  "type": "collection",
+  "timestamp": "2020-05-06T16:11:46.1411424-05:00",
+  "entry": [
+    {
+      "fullUrl": "https://github.com/microsoft-healthcare-madison/learning-spike-erp/MeasureReport/FHIR-341",
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "FHIR-341",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/MeasureReport"
+          ],
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://hl7.org/fhir/us/saner/FEMADailyHospitalCOVID19Reporting",
+        "subject": {
+          "reference": "Location/Loc-X140115"
+        },
+        "date": "2020-05-05T00:00:00-05:00",
+        "reporter": {
+          "reference": "Organization/X140115",
+          "display": "LECKIE HOSPITAL"
+        },
+        "period": {
+          "start": "2020-05-05",
+          "end": "2020-05-05"
+        },
+        "group": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+                  "code": "percentPositiveAmongNewlyResultedTests",
+                  "display": "Percent Positive among Newly Resulted Tests"
+                }
+              ],
+              "text": "# of new positive test results released / # of total new tests released for previous date queried"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+                  "code": "cumulativePercentPositiveAmongResultedTests",
+                  "display": "Cumulative Percent Positive among Newly Resulted Tests"
+                }
+              ],
+              "text": "# of total positive results to released date / # of total tests results released to date"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://github.com/microsoft-healthcare-madison/learning-spike-erp/MeasureReport/FHIR-342",
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "FHIR-342",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/R4/StructureDefinition/MeasureReport"
+          ],
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://hl7.org/fhir/us/saner/CDCPatientImpactAndHospitalCapacity",
+        "subject": {
+          "reference": "Location/Loc-X140115"
+        },
+        "date": "2020-05-05T00:00:00-05:00",
+        "reporter": {
+          "reference": "Organization/X140115",
+          "display": "LECKIE HOSPITAL"
+        },
+        "period": {
+          "start": "2020-05-05",
+          "end": "2020-05-05"
+        },
+        "group": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem",
+                  "code": "Beds",
+                  "display": "Beds"
+                }
+              ],
+              "text": "Hospital Bed Reporting"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem",
+                  "code": "Ventilators",
+                  "display": "Ventilators"
+                }
+              ],
+              "text": "Hospital Ventilator Reporting"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem",
+                  "code": "Encounters",
+                  "display": "Encounters"
+                }
+              ],
+              "text": "Hospital COVID-19 Encounters Reporting"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
